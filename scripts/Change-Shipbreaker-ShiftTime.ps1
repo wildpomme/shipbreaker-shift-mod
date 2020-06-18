@@ -1,7 +1,13 @@
 param (
-    [int]$shiftMinutes = 15,
-    [bool]$restoreBackup = $false
+    [int]$shiftMinutes,
+    [bool]$restoreBackup
 )
+
+if ( -not $shiftMinutes ) {
+    while ( -not $shiftMinutes ) {
+        $shiftMinutes = Read-Host -Prompt "Enter in whole minutes how long you would like your shift to last"
+    }
+}
 
 [single]$shiftSeconds = $shiftMinutes * 60
 
