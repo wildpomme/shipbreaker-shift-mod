@@ -34,13 +34,13 @@ else {
     }
 
     $signal = "43-61-72-65-65-72-4D-6F-64-65-5F-4C-65-76-65-6C-41-73-73-65-74"
-    $offset1 = 0x413BAD0
-    $offset2 = 0x413BAE4
+    $offset1 = 0x41412B8   # update to Version 0.1.3.140856
+    $offset2 = 0x41412CC   # update to Version 0.1.3.140856
     $bytes = [System.IO.File]::ReadAllBytes("$installLocation$shiftRelative")
     $signalTest = [System.BitConverter]::ToString($bytes[$offset1..$offset2])
 
     if ($signal -eq $signalTest) {
-        $shiftOffset = 0x413BB20
+        $shiftOffset = 0x4141308 # update to Version 0.1.3.140856
 
         $boots = [System.BitConverter]::GetBytes([single]$shiftSeconds)
 
