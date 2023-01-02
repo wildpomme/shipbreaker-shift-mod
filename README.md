@@ -1,3 +1,5 @@
+## This Mod is obsolete, due to changes to the game itself, allowing custom settings
+
 # shipbreaker-shift-mod
 This is a mod for the game Hardspace: Shipbreaker that changes the value of the shift timer.
 
